@@ -20,6 +20,9 @@ app.use(cookieParser());
 
 // Routes
 app.use('/api', router);
+app.get('/', (req, res) => {
+  res.send('Backend root is working');
+});
 
 // Server setup
 const PORT = process.env.PORT || 8080;
